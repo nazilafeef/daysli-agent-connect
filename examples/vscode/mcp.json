@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "daysli": {
+      "type": "http",
+      "url": "https://daysli.com/mcp"
+    }
+  }
+}

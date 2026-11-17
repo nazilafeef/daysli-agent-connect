@@ -1,0 +1,13 @@
+{
+  "name": "daysli-agent-connect",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Connect ChatGPT, Claude or any MCP assistant to Daysli.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test",
+    "verify": "node scripts/verify.mjs"
+  }
+}
