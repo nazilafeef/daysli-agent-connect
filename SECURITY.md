@@ -2,8 +2,10 @@
 
 ## Reporting a vulnerability
 
-Please report security problems in Daysli MCP, its sign-in (OAuth) or this repository privately by email to
-**team@daysli.com** with "Security" in the subject. Do not open a public issue for a vulnerability.
+Please report security problems in Daysli MCP, its sign-in (OAuth) or this repository privately to Daysli Care:
+by email to **care@mail.daysli.com** with "Security" in the subject, or through
+[daysli.com/help](https://daysli.com/help?ref=gh-agent-connect) choosing "Security". Do not open a public issue for a
+vulnerability.
 
 Include what you found, how to reproduce it, and what an attacker could do with it. We will acknowledge your report
 within three working days and keep you informed until it is resolved.

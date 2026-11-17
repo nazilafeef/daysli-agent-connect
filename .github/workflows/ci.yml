@@ -38,3 +38,5 @@ jobs:
           node-version: 22
       - name: Check https://daysli.com/mcp
         run: node scripts/verify.mjs
+      - name: Documented tools match daysli.com/mcp
+        run: node scripts/check-docs.mjs

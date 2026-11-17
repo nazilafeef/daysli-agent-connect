@@ -91,3 +91,25 @@ test('no file in the repository looks like a secret', async () => {
     assert.ok(!SECRET.test(text), `possible secret in ${f}`);
   }
 });
+
+test('every link back to Daysli carries the gh-agent-connect tag', async () => {
+  const { readdir, readFile } = await import('node:fs/promises');
+  const root = new URL('../', import.meta.url);
+  const files = (await readdir(root, { recursive: true })).filter((f) => f.endsWith('.md') && !/node_modules/.test(f));
+  for (const f of files) {
+    const text = await readFile(new URL(f.replace(/\\/g, '/'), root), 'utf8');
+    for (const m of text.matchAll(/(?:\]\(|<)(https:\/\/(?:app\.)?daysli\.com\/[^)>\s]*)/g)) {
+      assert.match(m[1], /[?&]ref=gh-agent-connect(#|$)/, `${f}: ${m[1]}`);
+    }
+  }
+});
+
+test('the docs check compares tool lists both ways', async () => {
+  const { compare, documented, published } = await import('../scripts/check-docs.mjs');
+  assert.deepEqual(documented('| `a_b` | x | Reads |\n| `c` | y | Reads |'), ['a_b', 'c']);
+  assert.deepEqual(published('<th scope="row"><code>a_b</code></th><th scope="row"><code>c</code></th>'), ['a_b', 'c']);
+  assert.equal(compare(['a', 'b'], ['a', 'b']).ok, true);
+  assert.deepEqual(compare(['a'], ['a', 'b']).missing, ['b']);
+  assert.deepEqual(compare(['a', 'b'], ['a']).extra, ['b']);
+  assert.equal(compare([], []).ok, false);
+});

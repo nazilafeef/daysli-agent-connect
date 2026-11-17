@@ -8,6 +8,6 @@
   "engines": { "node": ">=20" },
   "scripts": {
     "test": "node --test",
-    "verify": "node scripts/verify.mjs"
+    "verify": "node scripts/verify.mjs && node scripts/check-docs.mjs"
   }
 }

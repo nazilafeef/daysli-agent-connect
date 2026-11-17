@@ -47,7 +47,8 @@ read, but cannot change anything, exactly as in the Daysli app.
 Node.js 20 or later, no dependencies:
 
 ```sh
-node scripts/verify.mjs
+node scripts/verify.mjs       # the server, its sign-in and its permissions
+node scripts/check-docs.mjs   # docs/tools.md matches the tools daysli.com/mcp lists today
 ```
 
 It reads the public discovery documents, confirms that the server asks for sign-in, that PKCE (S256) is required,
@@ -55,7 +56,7 @@ and that no diary permission exists. It never signs in and sends no personal dat
 
 ## Stop at any time
 
-Disconnect an assistant in Daysli under [Your assistants](https://app.daysli.com/assistants). The connection stops on
+Disconnect an assistant in Daysli under [Your assistants](https://app.daysli.com/assistants?ref=gh-agent-connect). The connection stops on
 its next request.
 
 ## Links
@@ -63,10 +64,10 @@ its next request.
 - Daysli MCP: <https://daysli.com/mcp?ref=gh-agent-connect>
 - Step-by-step connection guide: <https://daysli.com/assistant?ref=gh-agent-connect>
 - Building your own software instead (REST API with personal tokens): <https://daysli.com/developers?ref=gh-agent-connect>
-- Privacy: <https://daysli.com/privacy> - Terms: <https://daysli.com/terms>
+- Privacy: <https://daysli.com/privacy?ref=gh-agent-connect> - Terms: <https://daysli.com/terms?ref=gh-agent-connect>
 - Security reports: [SECURITY.md](SECURITY.md)
 
 ## License
 
 [MIT](LICENSE). This licence covers the files in this repository only. Use of the Daysli service is governed by the
-[Daysli Terms](https://daysli.com/terms).
+[Daysli Terms](https://daysli.com/terms?ref=gh-agent-connect).

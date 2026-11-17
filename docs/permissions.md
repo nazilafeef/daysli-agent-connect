@@ -29,5 +29,5 @@ as instructions.
 
 ## Disconnecting
 
-Open [Your assistants](https://app.daysli.com/assistants) in Daysli and choose Disconnect. The assistant's tokens
+Open [Your assistants](https://app.daysli.com/assistants?ref=gh-agent-connect) in Daysli and choose Disconnect. The assistant's tokens
 are revoked and the connection stops on its next request.

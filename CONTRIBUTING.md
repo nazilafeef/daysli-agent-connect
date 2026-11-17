@@ -26,4 +26,4 @@ The tests run offline. `node scripts/verify.mjs` additionally checks the live se
 
 By contributing you agree that your contribution is licensed under the MIT License in [LICENSE](LICENSE).
 
-Questions about your Daysli account belong with Daysli Care at <https://daysli.com/help>, not in this repository.
+Questions about your Daysli account belong with Daysli Care at <https://daysli.com/help?ref=gh-agent-connect>, not in this repository.

@@ -42,4 +42,4 @@ Kinds:
 - **Not yet:** company and vessel pages, Opportunities listings, Photos and Moments. They will be listed here only once
   they work.
 
-The live list is always at <https://daysli.com/mcp#developers-h>.
+The live list is always at <https://daysli.com/mcp?ref=gh-agent-connect#developers-h>.
